@@ -141,4 +141,24 @@ table {
   display: none;
 }
 
+.venceu{
+  color: green;
+}
+
+.perdeu{
+  color: red;
+}
+
+.errou{
+  background-color: #f86363 !important;
+  border-color: #800000 !important;
+  color: #800000 !important;
+}
+
+.acertou{
+  background-color: #5fe38b !important;
+  border-color: #009900 !important;
+  color: #004d00 !important;
+}
+
 `;
