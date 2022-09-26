@@ -3,7 +3,7 @@ import { AlfabetoLetra, AlfabetoWapper } from "./styles";
 
 export default function Letras({btnAlfabetoRef, verificarLetra, inicio}) {
   return(
-    <AlfabetoWapper>
+    <AlfabetoWapper data-identifier="letter">
       {alfabeto.map((letra, id) => (
         <AlfabetoLetra
           ref={(el) => (btnAlfabetoRef.current[id] = el)}

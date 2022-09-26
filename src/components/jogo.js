@@ -10,7 +10,7 @@ import {
 export default function Jogo({ imagens, imagem, imagemRef, inicio, reiniciar, iniciarJogo, palavra, letraRef, venceu, perdeu}) {
   return (
     <Preview>
-      <Imagem src={imagens[imagem]} ref={imagemRef} />
+      <Imagem src={imagens[imagem]} ref={imagemRef} data-identifier="game-image"/>
       <ContainerCol>
         <BtnAdicionaPalavra
           onClick={() => {
@@ -21,10 +21,11 @@ export default function Jogo({ imagens, imagem, imagemRef, inicio, reiniciar, in
               iniciarJogo();
             }
           }}
+          data-identifier="choose-word"
         >
           Escolher Palavra
         </BtnAdicionaPalavra>
-        <MarcadoresWapper>
+        <MarcadoresWapper data-identifier="word">
           {inicio
             ? palavra.map((p, id) => (
                 <Marcador key={id} ref={(el) => (letraRef.current[id] = el)}>
