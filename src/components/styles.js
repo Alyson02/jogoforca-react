@@ -3,12 +3,22 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 800px;
   margin: 0 auto;
+  @media(max-width: 600px){
+    margin: 0 20px;
+  }
 `;
 
 export const Preview = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media(max-width: 600px){
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+  }
 `;
 
 export const Imagem = styled.img`
@@ -19,6 +29,13 @@ export const ContainerCol = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media(max-width: 600px){
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 `;
 
 export const BtnAdicionaPalavra = styled.button`
@@ -29,6 +46,11 @@ export const BtnAdicionaPalavra = styled.button`
   cursor: pointer;
   padding: 12px 24px;
   border-radius: 7px;
+  width: 200px;
+
+  @media(max-width: 600px){
+    width: 150px;
+  }
 `;
 
 export const MarcadoresWapper = styled.ul`
@@ -41,6 +63,10 @@ export const Marcador = styled.li`
   border-bottom: 2px solid #121212;
   text-align: center;
   padding-bottom: 5px;
+
+  @media(max-width: 600px){
+    margin-bottom: 2px;
+  }
 `;
 
 export const AlfabetoWapper = styled.div`
@@ -48,6 +74,10 @@ export const AlfabetoWapper = styled.div`
   flex-wrap: wrap;
   margin-top: 50px;
   gap: 10px;
+
+  @media(max-width: 600px){
+    justify-content: center;
+  }
 `;
 
 export const AlfabetoLetra = styled.button`
@@ -74,14 +104,25 @@ export const ContainerRow = styled.div`
     font-weight: 400;
     font-size: 20px;
   }
+
+  @media(max-width: 600px){
+    p{
+      font-size: 18px;
+    }
+  }
 `;
 
 export const InputTexto = styled.input`
   width: 300px;
   height: 30px;
   border-radius: 5px;
+  height: 40px;
+  @media(max-width: 600px){
+    width: 150px;
+  }
 `;
 
 export const BtnChutar = styled(AlfabetoLetra)`
   width: auto;
+  height: 40px;
 `;
